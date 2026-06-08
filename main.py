@@ -93,28 +93,31 @@ def view_expenses():
 
 
 def filter_expenses():
+    category = input("Enter category to filter by: ").title()
 
-    category = input("Enter category: ").title()
+    found = False
+    total = 0
 
-    subtotal = 0
-
-    print("\nDate\t\tAmount\tNote")
-    print("-" * 40)
+    print("\nDate\t\tCategory\tAmount\tNote")
+    print("-" * 50)
 
     for expense in expenses:
-
         if expense["category"] == category:
-
             print(
                 f"{expense['date']}\t"
+                f"{expense['category']}\t\t"
                 f"{expense['amount']}\t"
                 f"{expense['note']}"
             )
 
-            subtotal += expense["amount"]
+            total += expense["amount"]
+            found = True
 
-    print("-" * 40)
-    print(f"Subtotal: {subtotal}")
+    if found:
+        print("-" * 50)
+        print(f"Total {category} Expenses: {total}")
+    else:
+        print("No expenses found in this category.")
 
 load_expenses()
 
