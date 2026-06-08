@@ -60,8 +60,9 @@ Expenses are stored in `expenses.json` in the following format:
   "note": "Burger"
 }
 ```
+## Demo
+<img width="1918" height="1013" alt="image" src="https://github.com/user-attachments/assets/fc98c943-2121-44a7-aa9d-3f97ed2d311f" />
 
----
 
 ## Author
 
